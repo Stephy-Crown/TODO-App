@@ -513,14 +513,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
 .top-\[500px\] {
   top: 500px;
 }
@@ -705,8 +697,12 @@ video {
   background-color: hsl(237 14% 26% / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/images\/bg-mobile-dark\.jpg\'\)\] {
-  background-image: url('/images/bg-mobile-dark.jpg');
+.bg-\[url\(\'\/dist\/images\/bg-mobile-dark\.jpg\'\)\] {
+  background-image: url('/dist/images/bg-mobile-dark.jpg');
+}
+
+.bg-\[url\(\'dist\/images\/bg-mobile-dark\.jpg\'\)\] {
+  background-image: url('dist/images/bg-mobile-dark.jpg');
 }
 
 .bg-cover {
@@ -847,8 +843,12 @@ video {
   background-color: hsl(0 0% 98% / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-\[url\(\'\/images\/bg-mobile-light\.jpg\'\)\] {
-  background-image: url('/images/bg-mobile-light.jpg');
+.dark .dark\:bg-\[url\(\'\/dist\/images\/bg-mobile-light\.jpg\'\)\] {
+  background-image: url('/dist/images/bg-mobile-light.jpg');
+}
+
+.dark .dark\:bg-\[url\(\'dist\/images\/bg-mobile-light\.jpg\'\)\] {
+  background-image: url('dist/images/bg-mobile-light.jpg');
 }
 
 .dark .dark\:text-vDarkDesaturatedBlue {
@@ -886,11 +886,19 @@ video {
     width: 600px;
   }
 
-  .md\:bg-\[url\(\'\/images\/bg-desktop-dark\.jpg\'\)\] {
-    background-image: url('/images/bg-desktop-dark.jpg');
+  .md\:bg-\[url\(\'\/dist\/images\/bg-desktop-dark\.jpg\'\)\] {
+    background-image: url('/dist/images/bg-desktop-dark.jpg');
   }
 
-  .dark .md\:dark\:bg-\[url\(\'\/images\/bg-desktop-light\.jpg\'\)\] {
-    background-image: url('/images/bg-desktop-light.jpg');
+  .md\:bg-\[url\(\'dist\/images\/bg-desktop-dark\.jpg\'\)\] {
+    background-image: url('dist/images/bg-desktop-dark.jpg');
+  }
+
+  .dark .md\:dark\:bg-\[url\(\'\/dist\/images\/bg-desktop-light\.jpg\'\)\] {
+    background-image: url('/dist/images/bg-desktop-light.jpg');
+  }
+
+  .dark .md\:dark\:bg-\[url\(\'dist\/images\/bg-desktop-light\.jpg\'\)\] {
+    background-image: url('dist/images/bg-desktop-light.jpg');
   }
 }

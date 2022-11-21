@@ -33,6 +33,13 @@
       .active-check img {
         transform: scale(1);
       }
+      .complete {
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
+      .active {
+        color: hsl(220, 98%, 61%);
+      }
     </style>
   </head>
   <body
@@ -40,8 +47,9 @@
   >
     <main class="banner-container w-full h-[90vh]">
       <div
-        class="banner md:bg-[url('images/bg-desktop-dark.jpg')] md:dark:bg-[url('images/bg-desktop-light.jpg')] bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center w-full h-[50%] bg-[url('images/bg-mobile-dark.jpg')] dark:bg-[url('images/bg-mobile-light.jpg')]"
+        class="banner md:bg-[url('/dist/images/bg-desktop-dark.jpg')] md:dark:bg-[url('/dist/images/bg-desktop-light.jpg')] bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center w-full h-[50%] bg-[url('/dist/images/bg-mobile-dark.jpg')] dark:bg-[url('/dist/images/bg-mobile-light.jpg')]"
       >
+        <!-- <img src="/dist/images/bg-desktop-dark.jpg" alt="" /> -->
         <header
           class="content md:w-[600px] w-[350px] flex justify-between items-center md:mt-[50vh] mt-[15vh]"
         >
@@ -50,9 +58,13 @@
           >
             TODO
           </h1>
-          <img src="images/icon-sun.svg" alt="icon-sun" class="h-[25px] sun" />
           <img
-            src="images/icon-moon.svg"
+            src="dist/images/icon-sun.svg"
+            alt="icon-sun"
+            class="h-[25px] sun"
+          />
+          <img
+            src="dist/images/icon-moon.svg"
             alt="moon-icon"
             class="moon h-[25px] hidden"
           />
@@ -85,7 +97,7 @@
                   class="check active-check w-[20px] h-[20px] border-[1px] border-vDarkGrayBlue rounded-full grid place-content-center mr-[1rem] cursor-pointer"
                 >
                   <img
-                    src="images/icon-check.svg"
+                    src="dist/images/icon-check.svg"
                     alt="check-icon"
                     class="transform scale-0 transition-all duration-[0.3s] ease-linear"
                   />
@@ -99,7 +111,7 @@
                   class="close opacity-0 transition-all duration-[0.4s] ease hover:opacity-100 cursor-pointer"
                   id="close"
                 >
-                  <img src="images/icon-cross.svg" alt="cross-icon" />
+                  <img src="dist/images/icon-cross.svg" alt="cross-icon" />
                 </button>
               </div>
               <div class="line w-full bg-vDarkGrayBlue h-[0.9px]"></div>
@@ -112,7 +124,7 @@
             >
               <p>5 items left</p>
               <div class="choice flex cursor-pointer">
-                <p class="px-[5px] hover:text-brightBlue">All</p>
+                <p class="px-[5px] hover:text-brightBlue active">All</p>
                 <p class="px-[5px] hover:text-brightBlue">Active</p>
                 <p class="px-[5px] hover:text-brightBlue">Completed</p>
               </div>
@@ -126,13 +138,13 @@
               <p>Clear Completed</p>
             </div>
           </div>
-          <div
+          <!-- <div
             class="choice rounded-lg md:hidden flex cursor-pointer w-full mt-[30px] text-darkGrayBlue py-[1rem] px-[0.9rem] bg-vDarkDesaturatedBlue dark:bg-vLightGray justify-center shadow-lg"
           >
             <p class="px-[5px] hover:text-brightBlue">All</p>
             <p class="px-[5px] hover:text-brightBlue">Active</p>
             <p class="px-[5px] hover:text-brightBlue">Completed</p>
-          </div>
+          </div> -->
 
           <p
             class="text-center text-darkGrayBlue md:hidden top-[500px] left-[30px] right-[30px]"
