@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 14px;
+        text-align: center;
+        padding: 30px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .attribution {
+        color: white;
+      }
+      .active-check {
+        background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+      }
+      .active-check img {
+        transform: scale(1);
+      }
+      .complete {
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
+      .active {
+        color: hsl(220, 98%, 61%);
+      }
+    </style>
+  </head>
+  <body
+    class="w-full h-[100vh] bg-vDarkBlue dark:bg-vLightGray font-JosefinSans"
+  >
+    <main class="banner-container w-full h-[90vh]">
+      <div
+        class="banner md:bg-imgLight bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center w-full h-[50%]"
+      >
+        <!-- <img src="/dist/images/bg-desktop-dark.jpg" alt="" /> -->
+        <header
+          class="content md:w-[600px] w-[350px] flex justify-between items-center md:mt-[50vh] mt-[15vh]"
+        >
+          <h1
+            class="tracking-[8px] text-white font-bold font-JosefinSans text-4xl leading-[50px]"
+          >
+            TODO
+          </h1>
+          <img
+            src="dist/images/icon-sun.svg"
+            alt="icon-sun"
+            class="h-[25px] sun"
+          />
+          <img
+            src="dist/images/icon-moon.svg"
+            alt="moon-icon"
+            class="moon h-[25px] hidden"
+          />
+        </header>
+
+        <section
+          class="todo md:w-[600px] w-[350px] md:max-h-[490px] max-h-[240px]"
+        >
+          <form class="w-full h-[83px]">
+            <input
+              type="text"
+              placeholder="Create a new todo..."
+              class="w-full font-JosefinSans py-[15px] px-[30px] rounded-md mt-[2rem] bg-vDarkDesaturatedBlue dark:bg-vLightGray outline-none border-none text-white tracking-normal"
+              id="inputText"
+            />
+          </form>
+          <!-- h-[100px] -->
+          <div class="list w-full max-h-[330px] mt-[2rem] shadow-xl">
+            <!-- TODO CONTAINER -->
+            <div
+              class="todo-con w-full rounded-md bg-vDarkDesaturatedBlue"
+              id="todo-con"
+            >
+              <!-- Template -->
+              <!-- <div class="createDiv" id="createDiv"></div> -->
+              <div
+                class="todo-li bg-vDarkDesaturatedBlue dark:bg-vLightGray flex items-center py-[1rem] px-[0.9rem] rounded-t-lg"
+              >
+                <div
+                  class="check active-check w-[20px] h-[20px] border-[1px] border-vDarkGrayBlue rounded-full grid place-content-center mr-[1rem] cursor-pointer"
+                >
+                  <img
+                    src="dist/images/icon-check.svg"
+                    alt="check-icon"
+                    class="transform scale-0 transition-all duration-[0.3s] ease-linear"
+                  />
+                </div>
+                <p
+                  class="w-[92%] dark:text-vDarkDesaturatedBlue text-white text-[18px]"
+                >
+                  Hello
+                </p>
+                <button
+                  class="close opacity-0 transition-all duration-[0.4s] ease hover:opacity-100 cursor-pointer"
+                  id="close"
+                >
+                  <img src="dist/images/icon-cross.svg" alt="cross-icon" />
+                </button>
+              </div>
+              <div class="line w-full bg-vDarkGrayBlue h-[0.9px]"></div>
+
+              <!-- Populate with JS -->
+            </div>
+
+            <div
+              class="info md:flex w-full hidden justify-between text-darkGrayBlue py-[1rem] px-[0.9rem] bg-vDarkDesaturatedBlue dark:bg-vLightGray rounded-b-lg"
+            >
+              <p>5 items left</p>
+              <div class="choice flex cursor-pointer">
+                <p class="px-[5px] hover:text-brightBlue active">All</p>
+                <p class="px-[5px] hover:text-brightBlue">Active</p>
+                <p class="px-[5px] hover:text-brightBlue">Completed</p>
+              </div>
+              <p>Clear Completed</p>
+            </div>
+
+            <div
+              class="info md:hidden flex w-full justify-between text-darkGrayBlue py-[1rem] px-[0.9rem] bg-vDarkDesaturatedBlue dark:bg-vLightGray rounded-b-lg"
+            >
+              <p>5 items left</p>
+              <p>Clear Completed</p>
+            </div>
+          </div>
+          <!-- <div
+            class="choice rounded-lg md:hidden flex cursor-pointer w-full mt-[30px] text-darkGrayBlue py-[1rem] px-[0.9rem] bg-vDarkDesaturatedBlue dark:bg-vLightGray justify-center shadow-lg"
+          >
+            <p class="px-[5px] hover:text-brightBlue">All</p>
+            <p class="px-[5px] hover:text-brightBlue">Active</p>
+            <p class="px-[5px] hover:text-brightBlue">Completed</p>
+          </div> -->
+
+          <p
+            class="text-center text-darkGrayBlue md:hidden top-[500px] left-[30px] right-[30px]"
+          >
+            Drag and drop to reorder list
+          </p>
+
+          <p
+            class="text-center py-[30px] text-darkGrayBlue hidden md:block top-[350px] left-[30px] right-[30px]"
+          >
+            Drag and drop to reorder list
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Stephanie Udemezue</a>.
+    </div>
+    <script src="index.js"></script>
+    <!-- <script src="/app.js"></script> -->
+    <script src="tutorial.js"></script>
+  </body>
+</html>

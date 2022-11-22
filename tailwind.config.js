@@ -9,10 +9,18 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html", "app.js"],
+  content: ["index.html", "tutorial.js", "app.js"],
   darkMode: "class",
   theme: {
     extend: {
+      backgroundImage: {
+        // imgLight: "url('//dist/images/bg-desktop-dark.jpg')",
+        // imgDark: "url('/dist/images/bg-desktop-dark.jpg')",
+        imgLight: "url('/dist/images/bg-desktop-light.jpg')",
+        imgDark: "url('/dist/images/bg-desktop-dark.jpg')",
+        mobileLight: "url('/dist/images/bg-mobile-light.jpg')",
+        mobileDark: "url('/dist/images/bg-mobile-dark.jpg')",
+      },
       colors: {
         brightBlue: "hsl(220, 98%, 61%)",
         checkBackgroundLG: "hsl(192, 100%, 67%) to hsl(280, 87%, 65%)",

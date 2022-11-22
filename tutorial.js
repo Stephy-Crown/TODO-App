@@ -27,7 +27,7 @@ function addTodo(elem) {
   if (todoText) {
     newTodo.innerHTML = `
     <div
-    class="todo-li bg-vDarkDesaturatedBlue dark:bg-vLightGray flex items-center py-[1rem] px-[0.9rem]"
+    class="todo-li dark:bg-vDarkDesaturatedBlue bg-vLightGray flex items-center py-[1rem] px-[0.9rem] rounded-t-lg"
   >
     <div
       class="check w-[20px] h-[20px] border-[1px] border-vDarkGrayBlue rounded-full grid place-content-center mr-[1rem] cursor-pointer ${
@@ -42,14 +42,14 @@ function addTodo(elem) {
     </div>
     <p class="w-[92%] paraTags ${
       elem && elem.complete ? "complete" : ""
-    } text-white dark:text-black text-[18px] font-JosefinSans">${todoText}</p>
+    } dark:text-vLightGray text-vDarkGrayBlue  text-[18px] font-JosefinSans">${todoText}</p>
     <button
       class="close opacity-0 transition-all duration-[0.4s] ease hover:opacity-100 cursor-pointer"
     >
       <img src="dist/images/icon-cross.svg" alt="cross-icon" />
     </button>
   </div>
-  <div class="line w-full bg-vDarkGrayBlue h-[0.9px]"></div>`;
+  <div class="line w-full dark:bg-darkGrayBlue bg-lightGrayBlue h-[0.8px]"></div>`;
     todoContainer.appendChild(newTodo);
     localStorageUpdate();
   }
