@@ -9,7 +9,7 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html", "tutorial.js", "app.js"],
+  content: ["index.html", "index3.html", "tutorial.js", "app.js"],
   darkMode: "class",
   theme: {
     extend: {
