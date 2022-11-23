@@ -6,6 +6,7 @@ const todoContainer = document.querySelector(".todo-con");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   addTodo();
+  inputText.value = "";
 });
 
 //
@@ -19,7 +20,9 @@ if (todos) {
 function addTodo(elem) {
   let newTodo = document.createElement("div");
   newTodo.classList.add("Newtodo");
+
   let todoText = inputText.value;
+
   if (elem) {
     todoText = elem.inputText;
   }
@@ -44,12 +47,14 @@ function addTodo(elem) {
       elem && elem.complete ? "complete" : ""
     } dark:text-vLightGray text-vDarkGrayBlue  text-[18px] font-JosefinSans">${todoText}</p>
     <button
-      class="close opacity-0 transition-all duration-[0.4s] ease hover:opacity-100 cursor-pointer"
+      class="close opacity-50 hover:opacity-100 transition-all duration-[0.4s] ease cursor-pointer"
     >
+    
       <img src="dist/images/icon-cross.svg" alt="cross-icon" />
     </button>
   </div>
   <div class="line w-full dark:bg-darkGrayBlue bg-lightGrayBlue h-[0.8px]"></div>`;
+    // hover:opacity-100  opacity-0
     todoContainer.appendChild(newTodo);
     localStorageUpdate();
   }
