@@ -613,6 +613,10 @@ video {
   width: 92%;
 }
 
+.w-\[330px\] {
+  width: 330px;
+}
+
 .scale-0 {
   --tw-scale-x: 0;
   --tw-scale-y: 0;
