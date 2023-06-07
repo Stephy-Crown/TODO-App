@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="dist/output.css" />
     <title>Frontend Mentor | Todo app</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 14px;
@@ -42,7 +41,7 @@
       }
     </style>
   </head>
-  <body class="dark:bg-vDarkBlue bg-vLightGray font-JosefinSans">
+  <body class="dark:bg-vDarkBlue bg-vLightGray font-JosefinSans text-[30px]">
     <main
       class="banner-container relative flex flex-col justify-center items-center"
     >
@@ -56,7 +55,7 @@
         srcset=""
         class="dark:md:bg-imgDark w-full h-[250px]"
       />
-      <div class="header-div absolute top-[80px]">
+      <div class="header-div absolute top-[80px] md: xl: lg: sm:">
         <div
           class="content md:w-[600px] w-[330px] flex justify-between items-center"
         >
@@ -77,7 +76,9 @@
           />
         </div>
       </div>
-      <section class="absolute todo md:w-[600px] w-[330px] top-[110px]">
+      <section
+        class="absolute todo md:w-[600px] w-[330px] top-[110px] lg:w-[800px]"
+      >
         <form class="w-full h-[83px]">
           <input
             type="text"
