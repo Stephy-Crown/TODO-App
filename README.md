@@ -1,4 +1,4 @@
-# Todo app
+# ToDo app
 
 
 ## Welcome! 👋
